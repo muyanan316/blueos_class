@@ -1,0 +1,1640 @@
+{
+  "type": "div",
+  "class": "page",
+  "style": {
+    "backgroundColor": "#eef3fb",
+    "flexDirection": "column",
+    "minHeight": "466px",
+    "paddingBottom": "14px",
+    "paddingLeft": "14px",
+    "paddingRight": "14px",
+    "paddingTop": "14px",
+    "width": "466px"
+  },
+  "styleObjectId": 465862127,
+  "children": [
+    {
+      "type": "div",
+      "class": "header",
+      "style": {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "borderBottomColor": "#1d376f",
+        "borderBottomWidth": "3px",
+        "borderLeftColor": "#1d376f",
+        "borderLeftWidth": "3px",
+        "borderRadius": "6px",
+        "borderRightColor": "#1d376f",
+        "borderRightWidth": "3px",
+        "borderTopColor": "#1d376f",
+        "borderTopWidth": "3px",
+        "flexDirection": "row",
+        "height": "54px",
+        "paddingBottom": "0px",
+        "paddingLeft": "8px",
+        "paddingRight": "8px",
+        "paddingTop": "0px",
+        "width": "438px"
+      },
+      "children": [
+        {
+          "type": "text",
+          "attr": {
+            "value": "设置"
+          },
+          "class": "title",
+          "style": {
+            "color": "#000000",
+            "fontSize": "28px",
+            "fontWeight": "bold",
+            "width": "280px"
+          }
+        },
+        {
+          "type": "input",
+          "attr": {
+            "type": "button",
+            "value": "返回"
+          },
+          "bind": 1,
+          "class": "back-btn",
+          "events": {
+            "click": "backHome"
+          },
+          "style": {
+            "backgroundColor": "#244b9a",
+            "borderRadius": "6px",
+            "color": "#ffffff",
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "height": "38px",
+            "marginLeft": "40px",
+            "width": "86px"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "attr": {
+        "$value": "weekName"
+      },
+      "bind": 1,
+      "class": "week",
+      "style": {
+        "color": "#1d376f",
+        "fontSize": "22px",
+        "fontWeight": "bold",
+        "height": "34px",
+        "marginTop": "10px",
+        "width": "438px"
+      }
+    },
+    {
+      "type": "div",
+      "class": "table",
+      "style": {
+        "flexDirection": "column",
+        "marginTop": "6px",
+        "width": "438px"
+      },
+      "children": [
+        {
+          "type": "div",
+          "class": "head",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "序号"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "课程"
+              },
+              "class": "course-head",
+              "style": {
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "删除"
+              },
+              "class": "delete-head",
+              "style": {
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r1"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "1"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c1"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit1"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete1"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r2"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "2"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c2"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit2"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete2"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r3"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "3"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c3"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit3"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete3"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r4"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "4"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c4"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit4"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete4"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r5"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "5"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c5"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit5"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete5"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r6"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "6"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c6"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit6"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete6"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r7"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "7"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c7"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit7"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete7"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r8"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "8"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c8"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit8"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete8"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r9"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "9"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c9"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit9"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete9"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r10"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "10"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c10"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit10"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete10"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r11"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "11"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c11"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit11"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete11"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r12"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "12"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c12"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit12"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete12"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r13"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "13"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c13"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit13"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete13"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r14"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "14"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c14"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit14"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete14"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "r15"
+          },
+          "bind": 1,
+          "class": "line",
+          "style": {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "flexDirection": "row",
+            "height": "38px",
+            "marginTop": "5px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "15"
+              },
+              "class": "index-cell",
+              "style": {
+                "color": "#1d376f",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": "56px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "$value": "c15"
+              },
+              "bind": 1,
+              "class": "course-cell",
+              "events": {
+                "click": "edit15"
+              },
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "color": "#000000",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "width": "238px"
+              }
+            },
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "删"
+              },
+              "bind": 1,
+              "class": "delete-cell",
+              "events": {
+                "click": "delete15"
+              },
+              "style": {
+                "backgroundColor": "#fff4f5",
+                "borderRadius": "6px",
+                "color": "#d7263d",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "height": "32px",
+                "marginLeft": "8px",
+                "width": "92px"
+              }
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {
+            "$show": "canAdd"
+          },
+          "bind": 1,
+          "class": "add-line",
+          "style": {
+            "backgroundColor": "#ffffff",
+            "borderBottomColor": "#1d376f",
+            "borderBottomWidth": "3px",
+            "borderLeftColor": "#1d376f",
+            "borderLeftWidth": "3px",
+            "borderRadius": "6px",
+            "borderRightColor": "#1d376f",
+            "borderRightWidth": "3px",
+            "borderTopColor": "#1d376f",
+            "borderTopWidth": "3px",
+            "height": "42px",
+            "marginTop": "6px",
+            "paddingBottom": "0px",
+            "paddingLeft": "8px",
+            "paddingRight": "8px",
+            "paddingTop": "0px",
+            "width": "438px"
+          },
+          "children": [
+            {
+              "type": "input",
+              "attr": {
+                "type": "button",
+                "value": "+"
+              },
+              "bind": 1,
+              "class": "add-btn",
+              "events": {
+                "click": "addCourse"
+              },
+              "style": {
+                "backgroundColor": "#244b9a",
+                "borderRadius": "8px",
+                "color": "#ffffff",
+                "fontSize": "28px",
+                "fontWeight": "bold",
+                "height": "36px",
+                "width": "416px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "attr": {
+        "value": "关于"
+      },
+      "class": "about-title",
+      "style": {
+        "color": "#1d376f",
+        "fontSize": "22px",
+        "fontWeight": "bold",
+        "height": "34px",
+        "marginTop": "10px",
+        "width": "438px"
+      }
+    },
+    {
+      "type": "div",
+      "class": "about-panel",
+      "style": {
+        "backgroundColor": "#ffffff",
+        "borderBottomColor": "#1d376f",
+        "borderBottomWidth": "3px",
+        "borderLeftColor": "#1d376f",
+        "borderLeftWidth": "3px",
+        "borderRadius": "6px",
+        "borderRightColor": "#1d376f",
+        "borderRightWidth": "3px",
+        "borderTopColor": "#1d376f",
+        "borderTopWidth": "3px",
+        "flexDirection": "column",
+        "height": "150px",
+        "justifyContent": "center",
+        "paddingBottom": "8px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "paddingTop": "8px",
+        "width": "438px"
+      },
+      "children": [
+        {
+          "type": "text",
+          "attr": {
+            "value": "作者：沐言暗"
+          },
+          "class": "about-text",
+          "style": {
+            "color": "#000000",
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "lines": 1,
+            "width": "408px"
+          }
+        },
+        {
+          "type": "text",
+          "attr": {
+            "value": "有问题可以邮箱反馈 感谢您的支持"
+          },
+          "class": "about-text",
+          "style": {
+            "color": "#000000",
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "lines": 1,
+            "width": "408px"
+          }
+        },
+        {
+          "type": "text",
+          "attr": {
+            "value": "email:pure.shimi@gmail.com"
+          },
+          "class": "about-url",
+          "style": {
+            "color": "#1d376f",
+            "fontSize": "14px",
+            "lines": 2,
+            "marginTop": "4px",
+            "width": "408px"
+          }
+        },
+        {
+          "type": "text",
+          "attr": {
+            "value": "仓库地址:https://github.com/muyanan316/blueos_class"
+          },
+          "class": "about-url",
+          "style": {
+            "color": "#1d376f",
+            "fontSize": "14px",
+            "lines": 2,
+            "marginTop": "4px",
+            "width": "408px"
+          }
+        }
+      ]
+    }
+  ]
+}

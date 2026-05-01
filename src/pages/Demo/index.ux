@@ -1,0 +1,441 @@
+<template>
+  <div class="page" ontouchstart="touchStart" ontouchend="touchEnd">
+    <div class="topbar">
+      <text class="week">{{ weekName }}</text>
+      <text class="quote">{{ quoteText }}</text>
+      <input class="set-btn" type="button" value="设置" onclick="openSetting" />
+    </div>
+
+    <div class="main">
+      <div class="left-panel">
+        <div class="image-frame">
+          <img class="main-image" src="/assets/images/background-fixed.png" alt="blank" />
+        </div>
+        <div class="week-switch">
+          <input class="week-btn" type="button" value="上一天" onclick="prevWeek" />
+          <input class="week-btn next" type="button" value="下一天" onclick="nextWeek" />
+        </div>
+      </div>
+
+      <div class="table">
+        <div class="table-title">
+          <text class="table-title-text">课程</text>
+        </div>
+
+        <div class="course-row" show="{{ r1 }}">
+          <text class="num">1</text>
+          <text class="course">{{ c1 }}</text>
+        </div>
+        <div class="course-row" show="{{ r2 }}">
+          <text class="num">2</text>
+          <text class="course">{{ c2 }}</text>
+        </div>
+        <div class="course-row" show="{{ r3 }}">
+          <text class="num">3</text>
+          <text class="course">{{ c3 }}</text>
+        </div>
+        <div class="course-row" show="{{ r4 }}">
+          <text class="num">4</text>
+          <text class="course">{{ c4 }}</text>
+        </div>
+        <div class="course-row" show="{{ r5 }}">
+          <text class="num">5</text>
+          <text class="course">{{ c5 }}</text>
+        </div>
+        <div class="course-row" show="{{ r6 }}">
+          <text class="num">6</text>
+          <text class="course">{{ c6 }}</text>
+        </div>
+        <div class="course-row" show="{{ r7 }}">
+          <text class="num">7</text>
+          <text class="course">{{ c7 }}</text>
+        </div>
+        <div class="course-row" show="{{ r8 }}">
+          <text class="num">8</text>
+          <text class="course">{{ c8 }}</text>
+        </div>
+        <div class="course-row" show="{{ r9 }}">
+          <text class="num">9</text>
+          <text class="course">{{ c9 }}</text>
+        </div>
+        <div class="course-row last" show="{{ r10 }}">
+          <text class="num">10</text>
+          <text class="course">{{ c10 }}</text>
+        </div>
+        <div class="course-row" show="{{ r11 }}">
+          <text class="num">11</text>
+          <text class="course">{{ c11 }}</text>
+        </div>
+        <div class="course-row" show="{{ r12 }}">
+          <text class="num">12</text>
+          <text class="course">{{ c12 }}</text>
+        </div>
+        <div class="course-row" show="{{ r13 }}">
+          <text class="num">13</text>
+          <text class="course">{{ c13 }}</text>
+        </div>
+        <div class="course-row" show="{{ r14 }}">
+          <text class="num">14</text>
+          <text class="course">{{ c14 }}</text>
+        </div>
+        <div class="course-row last" show="{{ r15 }}">
+          <text class="num">15</text>
+          <text class="course">{{ c15 }}</text>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: {
+      weekIndex: 0,
+      touchY: 0,
+      weekName: '周一',
+      quoteText: '',
+      quotes: [
+        '长风破浪会有时 直挂云帆济沧海',
+        '千磨万击还坚劲 任尔东西南北风',
+        '会当凌绝顶 一览众山小',
+        '欲穷千里目 更上一层楼',
+        '少壮不努力 老大徒伤悲',
+        '路漫漫其修远兮 吾将上下而求索',
+        '沉舟侧畔千帆过 病树前头万木春',
+        '不经一番寒彻骨 怎得梅花扑鼻香',
+        '纸上得来终觉浅 绝知此事要躬行',
+        '宝剑锋从磨砺出 梅花香自苦寒来',
+        '黑发不知勤学早 白首方悔读书迟',
+        '读书不觉已春深 一寸光阴一寸金',
+        '少年易老学难成 一寸光阴不可轻',
+        '大鹏一日同风起 扶摇直上九万里',
+        '天生我材必有用 千金散尽还复来',
+        '黄沙百战穿金甲 不破楼兰终不还',
+        '莫愁前路无知己 天下谁人不识君',
+        '山重水复疑无路 柳暗花明又一村',
+        '春风得意马蹄疾 一日看尽长安花',
+        '海阔凭鱼跃 天高任鸟飞',
+        '读书破万卷 下笔如有神',
+        '精诚所至 金石为开',
+        '博观而约取 厚积而薄发',
+        '及时当勉励 岁月不待人',
+        '丈夫志四海 万里犹比邻',
+        '穷且益坚 不坠青云之志',
+        '老骥伏枥 志在千里',
+        '烈士暮年 壮心不已',
+        '莫等闲 白了少年头',
+        '人生在勤 不索何获',
+      ],
+      c1: '',
+      c2: '',
+      c3: '',
+      c4: '',
+      c5: '',
+      c6: '',
+      c7: '',
+      c8: '',
+      c9: '',
+      c10: '',
+      c11: '',
+      c12: '',
+      c13: '',
+      c14: '',
+      c15: '',
+      r1: true,
+      r2: true,
+      r3: true,
+      r4: true,
+      r5: true,
+      r6: true,
+      r7: true,
+      r8: false,
+      r9: false,
+      r10: false,
+      r11: false,
+      r12: false,
+      r13: false,
+      r14: false,
+      r15: false,
+    },
+
+    onInit() {
+      global.loadAppData(() => {
+        this.useTodayWeekday()
+      })
+    },
+
+    onShow() {
+      global.loadAppData(() => {
+        this.loadCourses()
+      })
+    },
+
+    useTodayWeekday() {
+      const now = new Date()
+      const day = now.getDay()
+      this.weekIndex = day === 0 ? 6 : day - 1
+      const quoteIndex = now.getTime() % this.quotes.length
+      this.quoteText = this.quotes[quoteIndex]
+      this.loadCourses()
+    },
+
+    ensureActive(item) {
+      if (!item.active) {
+        item.active = [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+        ]
+      }
+      while (item.active.length < 15) {
+        item.active.push(false)
+      }
+      while (item.courses.length < 15) {
+        item.courses.push('空')
+      }
+    },
+
+    loadCourses() {
+      const item = global.weekSchedule[this.weekIndex]
+      this.ensureActive(item)
+      this.weekName = item.name
+      this.c1 = item.courses[0]
+      this.c2 = item.courses[1]
+      this.c3 = item.courses[2]
+      this.c4 = item.courses[3]
+      this.c5 = item.courses[4]
+      this.c6 = item.courses[5]
+      this.c7 = item.courses[6]
+      this.c8 = item.courses[7]
+      this.c9 = item.courses[8]
+      this.c10 = item.courses[9]
+      this.c11 = item.courses[10]
+      this.c12 = item.courses[11]
+      this.c13 = item.courses[12]
+      this.c14 = item.courses[13]
+      this.c15 = item.courses[14]
+      this.r1 = item.active[0]
+      this.r2 = item.active[1]
+      this.r3 = item.active[2]
+      this.r4 = item.active[3]
+      this.r5 = item.active[4]
+      this.r6 = item.active[5]
+      this.r7 = item.active[6]
+      this.r8 = item.active[7]
+      this.r9 = item.active[8]
+      this.r10 = item.active[9]
+      this.r11 = item.active[10]
+      this.r12 = item.active[11]
+      this.r13 = item.active[12]
+      this.r14 = item.active[13]
+      this.r15 = item.active[14]
+    },
+
+    touchStart(event) {
+      const touch = event.touches && event.touches[0]
+      this.touchY = touch ? touch.pageY : event.pageY || 0
+    },
+
+    touchEnd(event) {
+      const touch = event.changedTouches && event.changedTouches[0]
+      const endY = touch ? touch.pageY : event.pageY || 0
+      const diff = endY - this.touchY
+      if (diff > 35) {
+        this.prevWeek()
+      } else if (diff < -35) {
+        this.nextWeek()
+      }
+    },
+
+    prevWeek() {
+      this.weekIndex = this.weekIndex === 0 ? 6 : this.weekIndex - 1
+      this.loadCourses()
+    },
+
+    nextWeek() {
+      this.weekIndex = this.weekIndex === 6 ? 0 : this.weekIndex + 1
+      this.loadCourses()
+    },
+
+    openSetting() {
+      global.settingWeekIndex = this.weekIndex
+      global.router.push({
+        uri: '/pages/DemoDetail',
+      })
+    },
+  }
+</script>
+
+<style lang="scss">
+  @import './../../assets/styles/style.scss';
+
+  .page {
+    width: 466px;
+    min-height: 466px;
+    padding: 14px;
+    flex-direction: column;
+    background-color: #eef3fb;
+  }
+
+  .topbar {
+    width: 438px;
+    height: 54px;
+    padding: 0 8px;
+    border-width: 3px;
+    border-color: #1d376f;
+    border-radius: 6px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+  }
+
+  .week {
+    width: 96px;
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .quote {
+    width: 216px;
+    height: 42px;
+    color: #444444;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    lines: 1;
+  }
+
+  .set-btn {
+    width: 86px;
+    height: 38px;
+    margin-left: 20px;
+    border-radius: 6px;
+    background-color: #244b9a;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .main {
+    width: 438px;
+    margin-top: 10px;
+    flex-direction: row;
+  }
+
+  .left-panel {
+    width: 156px;
+    flex-direction: column;
+  }
+
+  .image-frame {
+    width: 156px;
+    height: 350px;
+    border-width: 3px;
+    border-color: #1d376f;
+    border-radius: 6px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .main-image {
+    width: 156px;
+    height: 350px;
+    border-radius: 4px;
+    object-fit: fill;
+  }
+
+  .week-switch {
+    width: 156px;
+    height: 42px;
+    margin-top: 8px;
+    flex-direction: row;
+  }
+
+  .week-btn {
+    width: 74px;
+    height: 42px;
+    border-width: 3px;
+    border-color: #1d376f;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .week-btn.next {
+    margin-left: 8px;
+  }
+
+  .table {
+    width: 268px;
+    margin-left: 12px;
+    flex-direction: column;
+  }
+
+  .table-title {
+    width: 268px;
+    height: 42px;
+    border-width: 3px;
+    border-color: #1d376f;
+    border-radius: 6px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table-title-text {
+    width: 250px;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .course-row {
+    width: 268px;
+    height: 42px;
+    margin-top: 6px;
+    padding: 0 10px;
+    border-width: 3px;
+    border-color: #1d376f;
+    border-radius: 6px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+  }
+
+  .course-row.last {
+    margin-bottom: 0;
+  }
+
+  .num {
+    width: 42px;
+    color: #1d376f;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .course {
+    width: 186px;
+    margin-left: 8px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    lines: 1;
+  }
+</style>

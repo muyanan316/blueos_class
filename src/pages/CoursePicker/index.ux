@@ -1,0 +1,232 @@
+<template>
+  <div class="page">
+    <div class="header">
+      <text class="title">选择课程</text>
+      <input class="cancel-btn" type="button" value="取消" onclick="cancel" />
+    </div>
+
+    <text class="tip">点击后自动保存</text>
+
+    <div class="grid">
+      <div class="row">
+        <input class="btn" type="button" value="语文" onclick="chooseChinese" />
+        <input class="btn" type="button" value="数学" onclick="chooseMath" />
+        <input class="btn" type="button" value="英语" onclick="chooseEnglish" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="日语" onclick="chooseJapanese" />
+        <input class="btn" type="button" value="俄语" onclick="chooseRussian" />
+        <input class="btn" type="button" value="韩语" onclick="chooseKorean" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="德语" onclick="chooseGerman" />
+        <input class="btn" type="button" value="法语" onclick="chooseFrench" />
+        <input class="btn small" type="button" value="西班牙语" onclick="chooseSpanish" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="物理" onclick="choosePhysics" />
+        <input class="btn" type="button" value="历史" onclick="chooseHistory" />
+        <input class="btn" type="button" value="政治" onclick="choosePolitics" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="地理" onclick="chooseGeography" />
+        <input class="btn" type="button" value="生物" onclick="chooseBiology" />
+        <input class="btn" type="button" value="化学" onclick="chooseChemistry" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="美术" onclick="chooseArt" />
+        <input class="btn small" type="button" value="信息技术" onclick="chooseInfo" />
+        <input class="btn" type="button" value="体育" onclick="choosePe" />
+      </div>
+      <div class="row">
+        <input class="btn" type="button" value="社团活动" onclick="chooseClub" />
+        <input class="btn" type="button" value="班会" onclick="chooseClassMeeting" />
+        <input class="btn" type="button" value="自习" onclick="chooseSelfStudy" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  ensureActive(current) {
+    if (!current.active) {
+      current.active = [true, true, true, true, true, true, true, false, false, false, false, false, false, false, false]
+    }
+    while (current.active.length < 15) {
+      current.active.push(false)
+    }
+    while (current.courses.length < 15) {
+      current.courses.push('空')
+    }
+  },
+
+  save(name) {
+    global.loadAppData(() => {
+      this.saveCourse(name)
+    })
+  },
+
+  saveCourse(name) {
+    const week = global.settingWeekIndex || 0
+    const index = global.currentEditIndex || 0
+    this.ensureActive(global.weekSchedule[week])
+    global.weekSchedule[week].active[index] = true
+    global.weekSchedule[week].courses[index] = name
+    global.saveAppData()
+    global.router.push({
+      uri: '/pages/DemoDetail',
+    })
+  },
+
+  chooseChinese() {
+    this.save('语文')
+  },
+  chooseMath() {
+    this.save('数学')
+  },
+  chooseEnglish() {
+    this.save('英语')
+  },
+  chooseJapanese() {
+    this.save('日语')
+  },
+  chooseRussian() {
+    this.save('俄语')
+  },
+  chooseKorean() {
+    this.save('韩语')
+  },
+  chooseGerman() {
+    this.save('德语')
+  },
+  chooseFrench() {
+    this.save('法语')
+  },
+  chooseSpanish() {
+    this.save('西班牙语')
+  },
+  choosePhysics() {
+    this.save('物理')
+  },
+  chooseHistory() {
+    this.save('历史')
+  },
+  choosePolitics() {
+    this.save('政治')
+  },
+  chooseGeography() {
+    this.save('地理')
+  },
+  chooseBiology() {
+    this.save('生物')
+  },
+  chooseChemistry() {
+    this.save('化学')
+  },
+  chooseArt() {
+    this.save('美术')
+  },
+  chooseInfo() {
+    this.save('信息技术')
+  },
+  choosePe() {
+    this.save('体育')
+  },
+  chooseClub() {
+    this.save('社团活动')
+  },
+  chooseClassMeeting() {
+    this.save('班会')
+  },
+  chooseSelfStudy() {
+    this.save('自习')
+  },
+
+  cancel() {
+    global.router.back()
+  },
+}
+</script>
+
+<style lang="scss">
+@import './../../assets/styles/style.scss';
+
+.page {
+  width: 466px;
+  min-height: 466px;
+  padding: 14px;
+  flex-direction: column;
+  background-color: #eef3fb;
+}
+
+.header {
+  width: 438px;
+  height: 54px;
+  padding: 0 8px;
+  border-width: 3px;
+  border-color: #1d376f;
+  border-radius: 6px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.title {
+  width: 280px;
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  width: 86px;
+  height: 38px;
+  margin-left: 40px;
+  border-radius: 6px;
+  background-color: #244b9a;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tip {
+  width: 438px;
+  height: 28px;
+  margin-top: 8px;
+  color: #1d376f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid {
+  width: 438px;
+  margin-top: 6px;
+  flex-direction: column;
+}
+
+.row {
+  width: 438px;
+  height: 42px;
+  margin-bottom: 6px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 138px;
+  height: 40px;
+  border-width: 3px;
+  border-color: #1d376f;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn.small {
+  font-size: 15px;
+}
+
+</style>
